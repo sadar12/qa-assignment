@@ -1,8 +1,11 @@
 ///<reference types="cypress"/>
 let pageObject
 
+
+
 beforeEach(()=>{
-    cy.visit('http://192.168.134.238:8080')
+    cy.visit('http://192.168.134.238:8080');
+    pageObject=new Page();
 });
 it('UI Title Testing ',function(){
     cy.title().should('eq','UI Testing Site')
@@ -22,6 +25,7 @@ it('Form Page',function(){
 let activeButton=cy.get('li.active');
 expect(activeButton.contains('Form'));
 expect(cy.get('h1').contains('Simple Form Submission'));
+//comment
 })
 it('Search Bar',function(){
     cy.get('#hello-input').type('Sadar Munir')
