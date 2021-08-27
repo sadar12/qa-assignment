@@ -10,6 +10,9 @@ beforeEach(()=>{
 it('UI Title Testing ',function(){
     cy.title().should('eq','UI Testing Site')
 })
+//it('Company Logo  ',function(){
+    //cy.get('#if_logo').contains('Company Logo ');
+//})
 it('Home Button ',function(){
     cy.get('#home').click();
     
